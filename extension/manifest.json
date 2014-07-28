@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Off The Hook",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "1.0",
+
+  "permissions": [
+          "tabs","webRequest","webRequestBlocking", "storage",
+          "*://*/*"
+        ],
+
+  "background": {
+    "scripts": ["h5utils.js","ga.js","post.js","jquery-1.10.2.min.js","main.js"]
+  },
+
+  "browser_action": {
+    "default_title": "Hi",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

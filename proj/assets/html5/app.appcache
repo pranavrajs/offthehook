@@ -1,0 +1,10 @@
+CACHE MANIFEST
+#2014-May-d24 v1
+
+FALLBACK :
+ 
+NETWORK :
+http://localhost:1337/
+
+CACHE:
+http://thenextweb.com/company/flipkart

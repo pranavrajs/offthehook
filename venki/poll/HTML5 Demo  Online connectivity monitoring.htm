@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://html5demos.com/offline#view-source -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=620">
+<title>HTML5 Demo: Online connectivity monitoring</title>
+<link rel="stylesheet" href="http://html5demos.com/css/html5demos.css">
+<script type="text/javascript" async="" src="./HTML5 Demo  Online connectivity monitoring_files/azcarbon_2_1_0_VERT"></script><script src="./HTML5 Demo  Online connectivity monitoring_files/h5utils.js"></script>
+</head>
+<body>
+<section id="wrapper">
+
+<article>
+  <p>Current network status: <span id="status" class="online">online</span></p>
+</article>
+<script>
+var statusElem  = document.getElementById('status'),
+    state 		= document.getElementById('state');
+
+function online(event) {
+  statusElem.className = navigator.onLine ? 'online' : 'offline';
+  statusElem.innerHTML = navigator.onLine ? 'online' : 'offline';
+  //state.innerHTML += '<li>New event: ' + event.type + '</li>';
+}
+
+addEvent(window, 'online', online);
+addEvent(window, 'offline', online);
+online({ type: 'ready' });
+</script>
+</section>
+
+<script src="./HTML5 Demo  Online connectivity monitoring_files/ga.js" type="text/javascript"></script>
+</body></html>
